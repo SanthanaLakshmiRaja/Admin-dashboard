@@ -22,15 +22,15 @@ function closeSidebar() {
 
 
 // AREA CHART
-var areaChartOptions = {
+var areaChartOptions1 = {
   series: [
     {
-      name: 'Purchase Orders',
-      data: [31, 40, 28, 51, 42, 109, 100],
+      
+      data: [31, 60, 8, 51, 42, 109, 100],
     },
     {
-      name: 'Sales Orders',
-      data: [11, 32, 45, 32, 34, 52, 41],
+      
+      data: [11, 32, 49, 32, 34, 52, 41],
     },
   ],
   chart: {
@@ -43,7 +43,7 @@ var areaChartOptions = {
     },
   },
   colors: ['#00ab57', '#d50000'],
-  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+  labels: ['', '', '', '', '', '', ''],
   dataLabels: {
     enabled: false,
   },
@@ -61,12 +61,12 @@ var areaChartOptions = {
     borderColor: '#55596e',
     yaxis: {
       lines: {
-        show: true,
+        show: false,
       },
     },
     xaxis: {
       lines: {
-        show: true,
+        show: false,
       },
     },
   },
@@ -92,7 +92,7 @@ var areaChartOptions = {
     },
     axisTicks: {
       color: '#55596e',
-      show: true,
+      show: false,
     },
     labels: {
       offsetY: 5,
@@ -103,8 +103,9 @@ var areaChartOptions = {
   },
   yaxis: [
     {
+      show: false,
       title: {
-        text: 'Purchase Orders',
+       
         style: {
           color: '#f5f7ff',
         },
@@ -116,9 +117,239 @@ var areaChartOptions = {
       },
     },
     {
+      show: false,
       opposite: true,
       title: {
-        text: 'Sales Orders',
+      
+        style: {
+          color: '#f5f7ff',
+        },
+      },
+      labels: {
+        style: {
+          colors: ['#f5f7ff'],
+        },
+      },
+    },
+  ],
+  tooltip: {
+    shared: true,
+    intersect: false,
+    theme: 'dark',
+  },
+};
+var areaChartOptions2 = {
+  series: [
+    
+    {
+      
+      data: [11, 32, 45, 32, 34, 52, 41],
+    },
+  ],
+  chart: {
+    type: 'area',
+    background: 'transparent',
+    height: 350,
+    stacked: false,
+    toolbar: {
+      show: false,
+    },
+  },
+  colors: [ '#00ab57'],
+  labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+  dataLabels: {
+    enabled: false,
+  },
+  fill: {
+    gradient: {
+      opacityFrom: 0.4,
+      opacityTo: 0.1,
+      shadeIntensity: 1,
+      stops: [0, 100],
+      type: 'vertical',
+    },
+    type: 'gradient',
+  },
+  grid: {
+    borderColor: '#55596e',
+    yaxis: {
+      lines: {
+        show: false,
+      },
+    },
+    xaxis: {
+      lines: {
+        show: false,
+      },
+    },
+  },
+  legend: {
+    labels: {
+      colors: '#f5f7ff',
+    },
+    show: true,
+    position: 'top',
+  },
+  markers: {
+    size: 6,
+    strokeColors: '#1b2635',
+    strokeWidth: 3,
+  },
+  stroke: {
+    curve: 'smooth',
+  },
+  xaxis: {
+    axisBorder: {
+      color: '#55596e',
+      show: false,
+    },
+    axisTicks: {
+      color: '#55596e',
+      show: false,
+    },
+    labels: {
+      offsetY: 5,
+      style: {
+        colors: '#f5f7ff',
+      },
+    },
+  },
+  yaxis: [
+    {
+      show: false,
+      title: {
+        
+        style: {
+          color: '#f5f7ff',
+        },
+      },
+      labels: {
+        style: {
+          colors: ['#f5f7ff'],
+        },
+      },
+    },
+    {
+      opposite:true,
+      show: false,
+      title: {
+      
+        style: {
+          color: '#f5f7ff',
+        },
+      },
+      labels: {
+        style: {
+          colors: ['#f5f7ff'],
+        },
+      },
+    },
+  ],
+  tooltip: {
+    shared:false,
+    intersect: false,
+    theme: 'dark',
+  },
+};
+
+
+var areaChartOptions3 = {
+  series: [
+    {
+      
+      data: [31, 60, 78, 51, 42, 109, 100],
+    },
+   
+  ],
+  chart: {
+    type: 'area',
+    background: 'transparent',
+    height: 350,
+    stacked: false,
+    toolbar: {
+      show: false,
+    },
+  },
+  colors: ['#00ab57'],
+  labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+  dataLabels: {
+    enabled: false,
+  },
+  fill: {
+    gradient: {
+      opacityFrom: 0.4,
+      opacityTo: 0.1,
+      shadeIntensity: 1,
+      stops: [0, 100],
+      
+      type: 'vertical',
+    },
+    type: 'gradient',
+  },
+  grid: {
+    borderColor: '#55596e',
+    yaxis: {
+      lines: {
+        show: false,
+      },
+    },
+    xaxis: {
+      lines: {
+        show: false,
+      },
+    },
+  },
+  legend: {
+    labels: {
+      colors: '#f5f7ff',
+    },
+    show: true,
+    position: 'top',
+  },
+  markers: {
+    size: 6,
+    strokeColors: '#1b2635',
+    strokeWidth: 3,
+  },
+  stroke: {
+    curve: 'smooth',
+  },
+  xaxis: {
+    axisBorder: {
+      color: '#55596e',
+      show: false,
+    },
+    axisTicks: {
+      color: '#55596e',
+      show: false,
+    },
+    labels: {
+      offsetY: 5,
+      style: {
+        colors: '#f5f7ff',
+      },
+    },
+  },
+  yaxis: [
+    {
+      show: false,
+      title: {
+      
+        style: {
+          color: '#f5f7ff',
+        },
+      },
+      labels: {
+        style: {
+          colors: ['#f5f7ff'],
+        },
+      },
+    },
+    {
+      show: false,
+      opposite: true,
+      title: {
+       
         style: {
           color: '#f5f7ff',
         },
@@ -139,18 +370,18 @@ var areaChartOptions = {
 
 var areaChart = new ApexCharts(
   document.querySelector('#area-chart1'),
-  areaChartOptions
+  areaChartOptions1
 );
 areaChart.render();
 
 var areaChart = new ApexCharts(
   document.querySelector('#area-chart2'),
-  areaChartOptions
+  areaChartOptions2
 );
 areaChart.render();
 
 var areaChart = new ApexCharts(
   document.querySelector('#area-chart3'),
-  areaChartOptions
+  areaChartOptions3
 );
 areaChart.render();
